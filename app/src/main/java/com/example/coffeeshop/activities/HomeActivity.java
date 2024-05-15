@@ -1,7 +1,6 @@
-package com.example.coffeeshop;
+package com.example.coffeeshop.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.ui.AppBarConfiguration;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,15 +8,14 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.coffeeshop.databinding.ActivityMainBinding;
+import com.example.coffeeshop.MainActivity;
+import com.example.coffeeshop.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private AppBarConfiguration mAppBarConfiguration;
-    private ActivityMainBinding binding;
-    FirebaseAuth auth;
 
+    FirebaseAuth auth;
     ProgressBar progressBar;
 
     @Override
@@ -30,7 +28,9 @@ public class HomeActivity extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
         if(auth.getCurrentUser() != null){
             progressBar.setVisibility(View.VISIBLE);
+            startActivity(new Intent(HomeActivity.this, MainActivity.class));
             Toast.makeText(this, "Please wait you are alredy logged in", Toast.LENGTH_SHORT).show();
+            finish();
         }
     }
 

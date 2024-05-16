@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewProductsFragment">
+    android:padding="15dp"
+    tools:context=".NewProductsFragment"
+    android:background="@color/fondo"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:id="@+id/txt_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Nuevos Productos" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_background"
+        android:drawablePadding="10dp"
+        android:elevation="3dp"
+        android:padding="13dp"
+        android:hint="Nombre"
+        android:textColor="#88403D3D"
+        android:layout_marginTop="70dp"
+         />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/txt_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/edittext_background"
+        android:padding="13dp"
+        android:elevation="3dp"
+        android:hint="Descripcion"
+        android:textColor="#88403D3D"
+        android:drawablePadding="10dp"
+        />
+
+    <EditText
+        android:id="@+id/txt_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/edittext_background"
+        android:padding="13dp"
+        android:elevation="3dp"
+        android:hint="Precio"
+        android:textColor="#88403D3D"
+        android:drawablePadding="10dp"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Lista de Productos"
+        android:fontFamily="@font/alice"
+        android:textStyle="bold"/>
+
+    <ListView
+        android:id="@+id/lv_datosProductos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+
+
+
+</LinearLayout>

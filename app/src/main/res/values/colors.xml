@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="titulos">#45372d</color>
     <color name="fondo">#f7e6d4</color>
+    <color name="colorAccent">#886953</color>
 </resources>

@@ -3,12 +3,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyCartsFragment">
+    tools:context=".MyCartsFragment"
+    android:background="@color/fondo">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Mis tarjetas" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_marginTop="50dp">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/alice"
+            android:text="Mis tarjetas"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/match"
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginLeft="30dp"
+
+            android:src="@mipmap/tarjeta" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Aun no hay tarjetas registradas :("
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/alice"/>
+
+
+    </LinearLayout>
 
 </FrameLayout>
